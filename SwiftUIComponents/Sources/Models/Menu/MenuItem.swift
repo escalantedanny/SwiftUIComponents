@@ -14,7 +14,7 @@ let menuItem: [MenuItems] = [
     MenuItems(id: 6, title: "App Carousels"),
     MenuItems(id: 7, title: "App Dialogs"),
     MenuItems(id: 8, title: "App Toggles"),
-    MenuItems(id: 9, title: "App DropDown")
-
+    MenuItems(id: 9, title: "App DropDown"),
+    MenuItems(id: 10, title: "App Charts")
 
 ]
