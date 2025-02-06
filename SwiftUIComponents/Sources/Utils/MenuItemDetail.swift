@@ -10,7 +10,7 @@ struct MenuItemDetail: View {
         case 2 :
             Text("No Item available yet")
         case 10 :
-            BarMarkChartView(barTitle: "Ventas", data: .constant(dataSales))
+            ContentChart()
         default:
             Text("No Item available yet")
         }

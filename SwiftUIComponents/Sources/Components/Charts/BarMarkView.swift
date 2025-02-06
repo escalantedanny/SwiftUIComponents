@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-struct BarMarkChartView: View {
+struct BarMarkBlueView: View {
     
     var barTitle: String
     @Binding var data: [TransactionsData]
@@ -12,22 +12,24 @@ struct BarMarkChartView: View {
                 .font(.title)
                 .padding()
 
-            Chart(data) { item in
-                BarMark(
-                    x: .value("Tipo", item.category),
-                    y: .value("Cantidad", item.count)
-                )
-                .foregroundStyle(.blue)
+            HStack {
+                Chart(data) { item in
+                    BarMark(
+                        x: .value("Tipo", item.category),
+                        y: .value("Cantidad", item.count)
+                    )
+                    .foregroundStyle(.blue)
+                }
+                .frame(height: 180)
             }
-            .frame(height: 300)
-            .padding()
-
+            .padding(40)
         }
+        
     }
 
 }
 
 #Preview {
         
-    BarMarkChartView(barTitle: "Ventas Dinamicas", data: .constant(dataSales))
+    BarMarkBlueView(barTitle: "Ventas Dinamicas", data: .constant(dataSales))
 }
