@@ -12,7 +12,18 @@ struct CarouselScreen: View {
         
         VStack {
             NavigationLink(destination: CarouselAutoScrollScreen()) {
-                Text("Auto Scrolling".uppercased())
+                Text("Carousel Auto Scrolling".uppercased())
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.red)
+                    .cornerRadius(10)
+                    .shadow(radius: 10)
+            }
+            Divider()
+            NavigationLink(destination: Carousel3dScreen()) {
+                Text("Carousel 3D".uppercased())
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
