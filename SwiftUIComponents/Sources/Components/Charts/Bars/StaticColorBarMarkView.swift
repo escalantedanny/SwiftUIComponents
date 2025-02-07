@@ -20,7 +20,6 @@ struct StaticColorBarMarkView: View {
                     )
                     .cornerRadius(8)
                     .foregroundStyle(color)
-                    .foregroundStyle(by: .value("Categoría", item.category))
                     .annotation(position: .top) {
                         Text("$\(NumberToString(Int(item.amount)))")
                             .font(.system(size: 8))
