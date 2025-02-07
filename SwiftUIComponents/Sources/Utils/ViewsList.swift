@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ViewsList: View {
     var body: some View {
-        List(menuItem, id: \.id){ item in
+        List(mainMenuItem, id: \.id){ item in
             NavigationLink(destination: MenuItemDetail(item: item)){
                 Text(item.title)
             }
