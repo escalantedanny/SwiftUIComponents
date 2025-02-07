@@ -1,16 +1,16 @@
 import SwiftUI
 import Charts
 
-struct RedBarMarkView: View {
+struct StaticColorBarMarkView: View {
     
     var barTitle: String
+    var color: Color
     @Binding var data: [TransactionsData]
 
     var body: some View {
         VStack {
             Text(barTitle)
                 .font(.title)
-                .padding()
 
             HStack {
                 Chart(data) { item in
@@ -18,7 +18,8 @@ struct RedBarMarkView: View {
                         x: .value("Tipo", item.category),
                         y: .value("Cantidad", item.count)
                     )
-                    .foregroundStyle(.red)
+                    .cornerRadius(8)
+                    .foregroundStyle(color)
                 }
                 .frame(height: 180)
             }
@@ -31,5 +32,5 @@ struct RedBarMarkView: View {
 
 #Preview {
         
-    RedBarMarkView(barTitle: "Ventas Dinamicas", data: .constant(dataSales))
+    StaticColorBarMarkView(barTitle: "Ventas Dinamicas", color: .blue, data: .constant(dataSales))
 }

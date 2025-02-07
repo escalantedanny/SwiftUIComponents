@@ -4,16 +4,31 @@ struct BarsView: View {
     var body: some View {
         ScrollView  {
             VStack {
-                Text(" Component name = BlueBarMarkView")
+                Divider()
+                Text(" Component name = StaticColorBarMarkView()")
                     .font(.caption)
-                BlueBarMarkView(barTitle: "Title of Bar", data: .constant(dataSales))
-                Text(" Component name = RedBarMarkView")
+                StaticColorBarMarkView(barTitle: "Title of Bar", color: .blue, data: .constant(dataSales))
+                Divider()
+                Text(" Component name = VerticalBarMarkView()")
                     .font(.caption)
-                RedBarMarkView(barTitle: "Title of Bar", data: .constant(dataSales))
-                Text(" Component name = CurstomColorBarMarkView")
+                VerticalBarMarkView(barTitle: "Title graphic", data: .constant(dataSales))
+                Divider()
+                Text(" Component name = StaticColorHorizontalBarView()")
                     .font(.caption)
-                CurstomColorBarMarkView(barTitle: "Ventas Dinamicas", barColor: .green ,data: .constant(dataSales))
+                StaticColorHorizontalBarView(
+                    barTitle: "Diagrama title",
+                    color: .blue,
+                    data: dataSales
+                )
+                Divider()
+                Text(" Component name = HorizontalBarView()")
+                    .font(.caption)
+                HorizontalBarView(
+                    barTitle: "Diagrama title",
+                    data: dataSales
+                )
             }
+            .padding(2)
         }
     }
 }
