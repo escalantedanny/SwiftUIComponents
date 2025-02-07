@@ -18,6 +18,8 @@ struct MenuItemDetail: View {
             
         case 2 :
             Text("No Item available yet")
+        case 6 :
+            CarouselScreen()
         default:
             Text("No Item available yet")
         }
