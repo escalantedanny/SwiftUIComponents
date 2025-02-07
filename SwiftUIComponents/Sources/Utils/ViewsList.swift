@@ -1,15 +1,8 @@
-//
-//  ViewsList.swift
-//  SwiftUiComponents
-//
-//  Created by Jonathan Muñoz on 25-12-24.
-//
-
 import SwiftUI
 
 struct ViewsList: View {
     var body: some View {
-        List(mainMenuItem, id: \.id){ item in
+        List(mainMenuItems, id: \.id){ item in
             NavigationLink(destination: MenuItemDetail(item: item)){
                 Text(item.title)
             }

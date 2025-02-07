@@ -16,7 +16,7 @@ struct MenuItemDetail: View {
     }
 }
 
-struct ChatsMenuItemDetail: View {
+struct ChartsMenuItemDetail: View {
     let item: MenuItems
     
     var body: some View {
@@ -44,6 +44,6 @@ struct ChatsMenuItemDetail: View {
 }
 
 #Preview {
-    //MenuItemDetail(item: mainMenuItem[1])
-    ChatsMenuItemDetail(item: chartsMenuItem[1])
+    //MenuItemDetail(item: mainMenuItems[1])
+    ChartsMenuItemDetail(item: chartsMenuItems[1])
 }
