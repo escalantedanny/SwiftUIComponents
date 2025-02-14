@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentChart: View {
+struct ChartScreen: View {
     
     var body: some View {
         
@@ -12,5 +12,5 @@ struct ContentChart: View {
 }
 
 #Preview {
-    ContentChart()
+    ChartScreen()
 }

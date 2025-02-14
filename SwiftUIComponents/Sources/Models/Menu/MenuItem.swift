@@ -34,3 +34,13 @@ let chartsMenuItems: [MenuItems] = [
 ].enumerated().map { index, title in
     MenuItems(id: index + 1, title: title)
 }
+
+// Menú de gráficos (Charts)
+let carouselsMenuItems: [MenuItems] = [
+    "Carousel AutoScroll",
+    "Carousel 3d",
+    "Carousel Snap",
+    "Carouse Paralalax"
+].enumerated().map { index, title in
+    MenuItems(id: index + 1, title: title)
+}
